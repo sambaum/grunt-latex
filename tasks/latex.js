@@ -79,6 +79,8 @@ module.exports = function(grunt) {
 
       var args = latex.buildArgsArray(tmpOptions);
       var tmpArgs = args.slice(0);
+      tmpArgs.push('-halt-on-error'); // Quick fix
+      tmpArgs.push('-shell-escape'); // Quick fix
       // Strip directory name from file and supply it as extra cwd arg
       tmpArgs.push( path.basename( f ) );
 
